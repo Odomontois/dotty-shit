@@ -10,5 +10,8 @@ lazy val root = project
 
     libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
 
-    libraryDependencies += ("org.typelevel" %% "cats-core" % "1.5.0").withDottyCompat(dottyVersion)
+    libraryDependencies += ("org.typelevel" %% "cats-core" % "1.5.0").withDottyCompat(dottyVersion),
+    libraryDependencies += ("org.typelevel" %% "cats-effect" % "1.2.0").withDottyCompat(dottyVersion),
+
+    scalacOptions ++= List("-Xmax-inlines", "300")
   )

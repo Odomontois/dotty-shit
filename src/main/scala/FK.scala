@@ -22,7 +22,7 @@ val headOption: FunctionK[List, Option] = FunctionK(_ => _.headOption)
 class Foo 
 
 def foo(f: (erased Int) => Int): Int = {
-  erased val ctx = 1
+  val ctx = 1
   f(ctx)
 }
 
